@@ -13,3 +13,6 @@ class ReviewForm(forms.Form):
 			label='Review',widget=forms.Textarea(attrs={'class':'form-control','row':'5'})
 			
 		)
+	def send_email(self):
+		send_feedback_email_tasks.delay(
+			self.cleaned_data['name'],self.cleaned_data['email'],self.cleaned_data['review'])
