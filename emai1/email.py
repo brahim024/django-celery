@@ -10,4 +10,12 @@ def send_review_email(name,email,review):
 		'name':name,
 		'email':email,
 		'review':review
-	}
+	} 
+	email_subject='Thank you for review'
+	email_body=render_to_string('email_message.txt',context)
+
+	email=EmailMessage(
+		email_subject,email_body,
+		settings.DEFAULT_FROM_EMAIL,[email, ],
+		)
+	return email.send(fail_silently=False)
