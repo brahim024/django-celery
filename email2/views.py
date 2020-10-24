@@ -1,17 +1,15 @@
 from django.shortcuts import render
 from.models import Sendemail
 from django.core.mail import send_mail
+from.forms import SendemailForm
 # Create your views here.
 def send_email(request):
-	obj=Sendemail.objects.first()
-
+	obj=Sendemail.object.first()
 	if request.method=='POST':
-		name=request.POST['name']
+		subject=request.POST['subject']
 		email=request.POST['email']
-		description=request.POST['description']
+		message=request.POST['message']
 
-		print(name)
-		print(email)
-		print(description)
-
-	return render(request,'send_form.html')
+		
+		context={'obj':obj}
+	return render(request,'send_form.html',context)
