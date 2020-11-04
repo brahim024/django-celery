@@ -9,7 +9,16 @@ def send_email(request):
 		subject=request.POST['subject']
 		email=request.POST['email']
 		message=request.POST['message']
-
+		print(subject)
+		print(email)
+		print(message)
+		send_mail(
+		    subject,
+		    message,
+		    settings.EMAIL_HOST_USER,
+		    [email],
+		    fail_silently=False,
+)
 		
 	context={'obj':obj}
 	return render(request,'send_form.html',context)

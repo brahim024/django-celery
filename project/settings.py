@@ -138,4 +138,3 @@ EMAIL_HOST_USER='boughanm6@gmail.com'
 EMAIL_HOST_PASSWORD=''
 EMAIL_POST=587
 EMAIL_USE_TLS=True
-DEFAULT_FROM_EMAIL='boughanm6@gmail.com'
