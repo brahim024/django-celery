@@ -3,6 +3,6 @@ from email2.models import Sendemail
 
 class SendemailForm(forms.Form):
 	class Meta:
-		model:Sendemail
+		model=Sendemail
 		fields='__all__'
 		

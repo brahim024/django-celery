@@ -13,3 +13,4 @@ def send_email(request):
 		
 		context={'obj':obj}
 	return render(request,'send_form.html',context)
+
