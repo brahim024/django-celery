@@ -9,5 +9,5 @@
 **Run the following command to enable the plugin**
 
 `<rabbitmq-plugins.bat enable rabbitmq_management>`
-# Diagram for this project
-![flow send email](https://github.com/brahim024/django-celery-send-email/blob/main/django-app-flow.jpg)
+# This Result 😎😎🥳
+![flow send email](https://github.com/brahim024/django-celery-send-email/blob/main/result-sending.jpg)
